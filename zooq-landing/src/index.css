@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-gray-1: #FFFFFF;
+  --color-gray-2: #f6f6f8;
+  --color-gray-3: #e9e9f0;
+  --color-gray-4: #d9d9e4;
+  --color-gray-5: #bebed2;
+  --color-gray-6: #9f9fbb;
+  --color-gray-7: #8b88a9;
+  --color-gray-8: #7b769a;
+  --color-gray-9: #716a8b;
+  --color-gray-10: #5e5974;
+  --color-gray-11: #403D4D;
+  --color-gray-12: #000000;
+  
+  --color-primary-1: #f7f6fd;
+  --color-primary-2: #efedfa;
+  --color-primary-3: #e1ddf7;
+  --color-primary-4: #cbc2f0;
+  --color-primary-5: #af9fe6;
+  --color-primary-6: #9478da;
+  --color-primary-7: #825bcc;
+  --color-primary-8: #7148b9;
+  --color-primary-9: #5f3c9b;
+  --color-primary-10: #4f337f;
+  --color-primary-11: #410F62;
+  --color-primary-12: #151124;
+  
+  --color-rose-1: #fdf7fc;
+  --color-rose-3: #d775c6;
+  --color-rose-4: #410F62;
+  
+  --color-red-1: #fef7f6;
+  --color-red-2: #fde6e3;
+  --color-red-3: #f48575;
+  
+  --color-blue-1: #f5f7ff;
+  --color-blue-2: #F0F9FF;
+  --color-blue-3: #6080fa;
+  
+  --color-accent-1: #fdf7fc;
+  --color-accent-2: #BC3BDD;
+  --color-accent-3: #FFF62D;
+  --color-accent-4: #5801DB;
+  
+  --color-gradient-start: #FCEFEF;
+  --color-gradient-end: #BC3BDD;
+  
+  --font-family-dm-sans: 'DM Sans', sans-serif;
+  --font-family-albert-sans: 'Albert Sans', sans-serif;
+  
+  --font-size-h1: 72px;
+  --font-size-h2: 48px;
+  --font-size-h3: 32px;
+  --font-size-body1: 16px;
+  --font-size-body2: 12px;
+  --font-size-button: 16px;
+  
+  --line-height-h1: 74px;
+  --line-height-h2: 54px;
+  --line-height-h3: 40px;
+  --line-height-body1: 20px;
+  --line-height-body2: 18px;
+  --line-height-button: 19px;
+  
+  --letter-spacing-h1: -1.5px;
+  --letter-spacing-h2: -1.5px;
+  --letter-spacing-h3: -1.5px;
+  --letter-spacing-body1: -0.8px;
+  --letter-spacing-body2: 0px;
+  --letter-spacing-button: 0px;
+  
+  --font-weight-h1: 700;
+  --font-weight-h2: 700;
+  --font-weight-h3: 700;
+  --font-weight-body1: 400;
+  --font-weight-body2: 400;
+  --font-weight-button: 700;
+  
+  --spacing-52: 52px;
+  --border-radius-button: 8px;
+  
+  --shadow-button: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-button-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@layer base {
+  html {
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Button Components based on Figma design */
+  .btn-primary {
+    @apply bg-white text-gray-12 border border-gray-4 rounded-[8px] h-[52px] px-6 text-button shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-200 hover:bg-primary-7 hover:text-white hover:shadow-[0_4px_8px_rgba(0,0,0,0.15)] disabled:bg-gray-3 disabled:text-gray-6 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-11 text-white rounded-[8px] h-[52px] px-6 text-button shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-200 hover:bg-primary-7 hover:shadow-[0_4px_8px_rgba(0,0,0,0.15)] disabled:bg-gray-3 disabled:text-gray-6 disabled:cursor-not-allowed;
+  }
+  
+  .btn-icon {
+    @apply bg-white text-gray-12 rounded-[8px] w-[52px] h-[52px] flex items-center justify-center shadow-[0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-200 hover:bg-primary-7 hover:text-white hover:shadow-[0_4px_8px_rgba(0,0,0,0.15)] disabled:bg-gray-3 disabled:text-gray-6 disabled:cursor-not-allowed;
+  }
+  
+  .btn-text {
+    @apply text-gray-6 text-button transition-all duration-200 hover:text-primary-7 hover:underline;
+  }
+  
+  .btn-text-arrow {
+    @apply text-gray-12 text-button transition-all duration-200 hover:text-primary-7 hover:underline;
+  }
+  
+  /* Typography Components */
+  .heading-1 {
+    @apply text-h1 font-dm-sans text-gray-12;
+  }
+  
+  .heading-2 {
+    @apply text-h2 font-dm-sans text-gray-12;
+  }
+  
+  .heading-3 {
+    @apply text-h3 font-dm-sans text-gray-12;
+  }
+  
+  .body-1 {
+    @apply text-body1 font-dm-sans text-gray-12;
+  }
+  
+  .body-2 {
+    @apply text-body2 font-albert-sans text-gray-12;
+  }
+  
+  /* Gradient Components */
+  .gradient-primary {
+    background: linear-gradient(135deg, #FCEFEF 0%, #BC3BDD 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, #BC3BDD 0%, #5801DB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
