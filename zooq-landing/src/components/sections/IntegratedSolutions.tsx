@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Typography from '../ui/Typography';
 import Button from '../ui/Button';
+import contentCol1 from '../../assets/content/content-col1.png';
+import contentCol2 from '../../assets/content/content-col2.png';
 
 const IntegratedSolutions: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -65,7 +67,7 @@ const IntegratedSolutions: React.FC = () => {
               {/* First Div - Content Col 1 */}
               <div className="w-[650px] h-[400px] flex-shrink-0">
                   <img 
-                    src="/src/assets/content/content-col1.png" 
+                    src={contentCol1} 
                     alt="Content Column 1" 
                     className="w-full h-full rounded-lg"
                   />
@@ -96,7 +98,7 @@ const IntegratedSolutions: React.FC = () => {
               {/* Third Div - Content Col 2 */}
               <div className="w-[650px] h-[400px] flex-shrink-0">
                   <img 
-                    src="/src/assets/content/content-col2.png" 
+                    src={contentCol2} 
                     alt="Content Column 2" 
                     className="w-full h-full rounded-lg"
                   />
