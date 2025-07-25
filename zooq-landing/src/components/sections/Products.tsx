@@ -1,6 +1,5 @@
 import React from 'react';
 import Typography from '../ui/Typography';
-import Button from '../ui/Button';
 import productBlock1 from '../../assets/product/product_block1.png';
 import productBlock2 from '../../assets/product/product_block2.png';
 import productBlock3 from '../../assets/product/product_block3.png';
